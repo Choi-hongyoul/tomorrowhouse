@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "nodes-sass": "node-sass",
-    "sass": "node-sass styles/main.scss style.css"
+    "sass": "node-sass -w styles/main.scss style.css"
   },
   "keywords": [],
   "author": "",
