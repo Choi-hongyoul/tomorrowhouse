@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+    display: block;
+}
+
+html,body {
+	line-height: 1;
+    font-family: "Noto Sans KR", sans-serif;
+    margin: 0;
+    
+}
+ol, ul {
+	list-style: none;
+    padding-left: 0;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a,button {
+    cursor: pointer;
+}
