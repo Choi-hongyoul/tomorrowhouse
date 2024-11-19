@@ -1,8 +1,7 @@
 
 //변수선언은 왠만하면 최상단으로 올려줌
 @use './constants/colors';
-
-
+@use './constants/typograhy';
 @use './base/fonts';
 @use './base/reset';
 @use './base/normalize';
