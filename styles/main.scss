@@ -1,10 +1,10 @@
 
-//변수선언은 왠만하면 최상단으로 올려줌(dart sass에서는 @import 대신 @use 사용.
-@use './constants/colors';
-@use './constants/typograhy';
-@use './base/fonts';
-@use './base/reset';
-@use './base/normalize';
-@use './layouts/grids';
-
+//변수선언은 왠만하면 최상단으로 올려줌
+@import './constants/colors';
+@import './constants/typograhy';
+@import './base/fonts';
+@import './base/normalize';
+@import './base/reset';
+@import './mixins/text-style';
+@import './layouts/grids';
 

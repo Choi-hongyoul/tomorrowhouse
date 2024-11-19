@@ -84,42 +84,6 @@ i {
   content: "\e90f";
 }
 
-* {
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Noto Sans KR", sans-serif;
-}
-
-html, body {
-  line-height: 1;
-  font-family: "Noto Sans KR", sans-serif;
-  margin: 0;
-}
-
-ol, ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-a, button {
-  cursor: pointer;
-}
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -427,6 +391,49 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+html, body {
+  line-height: 1;
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+p {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.001em;
+  color: #191A20;
 }
 
 /*  

@@ -1,11 +1,6 @@
 @use 'sass:math';  // math 모듈을 가져옵니다.
 
-
-
 //                                                          Responsive Grid System
-
-
-                                  //Responsive Grid System
 
 /*  
     * MOBILE : < 768px ---------------------------------------------
@@ -104,7 +99,7 @@ $lg-max-container : ($lg-unit + $gutter) * $lg-columns; //1140px;
         @for $i from 1 through $lg-columns {
             .col-lg-#{$i} {
                 width :calc( ($lg-unit + $gutter) * $i );
-//@debug calc(($lg-unit + $gutter) * $i); ㅎㅎ
+//@debug calc(($lg-unit + $gutter) * $i);
             }
         }
     } 
