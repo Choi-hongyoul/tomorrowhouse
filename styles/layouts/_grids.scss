@@ -104,10 +104,8 @@ $lg-max-container : ($lg-unit + $gutter) * $lg-columns; //1140px;
         @for $i from 1 through $lg-columns {
             .col-lg-#{$i} {
                 width :calc( ($lg-unit + $gutter) * $i );
-//@debug calc(($lg-unit + $gutter) * $i);
+//@debug calc(($lg-unit + $gutter) * $i); ㅎㅎ
             }
         }
     } 
 }//.container
-
-sadsadsa
