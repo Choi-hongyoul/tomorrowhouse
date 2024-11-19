@@ -1,0 +1,109 @@
+@use 'sass:math';  // math 모듈을 가져옵니다.
+
+
+
+//                                                          Responsive Grid System
+
+/*  
+    * MOBILE : < 768px ---------------------------------------------
+    *  fixture : sm
+    *  colunm : 4
+    *  unit :  (100% - 10px (양옆 마진)) / 4 - 20px(거터)
+    *  gutter : 20px
+    *  margin : 5px
+    *  container : 100% - 10px (양옆 마진)
+*/
+
+/*
+    * TABLET : >= 768px ---------------------------------------------
+    *  fixture : md
+    *  colunm : 12
+    *  unit :  100% - 60px (양옆 마진) / 4 - 20px(거터)
+    *  gutter : 20px
+    *  margin : 30px
+    *  container : 100% - 60px (양옆 마진)
+    * max-container-size 960px
+*/
+
+/*
+    * DESKTOP : >= 960px ---------------------------------------------
+    *  fixture : lg
+    *  colunm : 12
+    *  unit :  75px
+    *  gutter : 20px
+    *  margin : auto
+    *  container : 1140 px
+    * max-container-size 1140px
+*/
+
+$gutter: 20px;   ///20px 공통
+
+$sm-columns :4;
+$sm-gmargin : 5px;
+
+$md-breakpoint : 768px;
+$md-columns :12;
+$md-gmargin : 30px;
+$md-max-container :  calc(960px + ($md-gmargin * 2) );
+ //960을 맞추기 위해 container로 빠지는 마진값을 더 해줌
+
+$lg-breakpoint: 1200px;
+$lg-columns: 12;
+$lg-unit: 75px; // unit값이75px로 고정이므로 맥스컨테이너와 마진값은 필요없음
+$lg-max-container : ($lg-unit + $gutter) * $lg-columns; //1140px; 
+
+// @debug ($lg-unit + $gutter) * $lg-columns;
+
+.container {
+    width: 100%;
+    padding: 0 $sm-gmargin;
+    margin: 0 auto; //정중앙
+
+    .row {   // 가로정렬
+        display: flex;
+        flex-wrap: wrap;
+     //flex-direction: row;    - 기본값이니 생략
+    }
+
+     // . col-sm-1 .col-md-2 .col-lg3-3 로 작성되니 아래 반복문사용 
+    [class^='col-'] {             // class 중 col- 로 시작되는 것을 모두 찾아라 
+        padding: 0 calc($gutter / 2);
+    }
+
+    @for $i from 1 through $sm-columns {
+        
+        .col-sm-#{$i}{ 
+            //width: $i / $sm-columns * 100%;  -  scss에서는 아래처럼
+            //width: percentage($i / $sm-columns);
+            width :calc( ($i / $sm-columns) * 100% );
+        }
+    } 
+
+
+ //TABLET--------------------------------------------------------------------
+    @media screen and (min-width: $md-breakpoint){
+        max-width:  $md-max-container;
+        padding: 0 $md-gmargin;
+
+        @for $i from 1 through $md-columns {
+            .col-md-#{$i} {
+                //width: percentage($i / $md-columns);
+                width :calc(($i / $md-columns) * 100%);
+            }
+        }
+    }
+
+//DESKTOP--------------------------------------------------------------------
+    @media screen and (min-width: $lg-breakpoint){
+        max-width: $lg-max-container;
+        padding: 0;
+
+        @for $i from 1 through $lg-columns {
+            .col-lg-#{$i} {
+                width :calc( ($lg-unit + $gutter) * $i );
+//@debug calc(($lg-unit + $gutter) * $i);
+            }
+        }
+    } 
+}//.container
+

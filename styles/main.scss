@@ -1,9 +1,10 @@
 
-//변수선언은 왠만하면 최상단으로 올려줌
+//변수선언은 왠만하면 최상단으로 올려줌(dart sass에서는 @import 대신 @use 사용.
 @use './constants/colors';
 @use './constants/typograhy';
 @use './base/fonts';
 @use './base/reset';
 @use './base/normalize';
+@use './layouts/grids';
 
 
