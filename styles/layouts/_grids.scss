@@ -1,13 +1,12 @@
-<<<<<<< HEAD
 @use 'sass:math';  // math 모듈을 가져옵니다.
 
 
 
 //                                                          Responsive Grid System
 
-=======
+
                                   //Responsive Grid System
->>>>>>> e53e902649acf70ca5dbc54c36162b09c7393600
+
 /*  
     * MOBILE : < 768px ---------------------------------------------
     *  fixture : sm
@@ -18,10 +17,6 @@
     *  container : 100% - 10px (양옆 마진)
 */
 
-<<<<<<< HEAD
-=======
-
->>>>>>> e53e902649acf70ca5dbc54c36162b09c7393600
 /*
     * TABLET : >= 768px ---------------------------------------------
     *  fixture : md
@@ -33,10 +28,6 @@
     * max-container-size 960px
 */
 
-<<<<<<< HEAD
-=======
-
->>>>>>> e53e902649acf70ca5dbc54c36162b09c7393600
 /*
     * DESKTOP : >= 960px ---------------------------------------------
     *  fixture : lg
@@ -47,11 +38,6 @@
     *  container : 1140 px
     * max-container-size 1140px
 */
-<<<<<<< HEAD
-=======
-@use 'sass:math';  // math 모듈을 가져옵니다.
-
->>>>>>> e53e902649acf70ca5dbc54c36162b09c7393600
 
 $gutter: 20px;   ///20px 공통
 
@@ -71,10 +57,6 @@ $lg-max-container : ($lg-unit + $gutter) * $lg-columns; //1140px;
 
 // @debug ($lg-unit + $gutter) * $lg-columns;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> e53e902649acf70ca5dbc54c36162b09c7393600
 .container {
     width: 100%;
     padding: 0 $sm-gmargin;
@@ -122,18 +104,9 @@ $lg-max-container : ($lg-unit + $gutter) * $lg-columns; //1140px;
         @for $i from 1 through $lg-columns {
             .col-lg-#{$i} {
                 width :calc( ($lg-unit + $gutter) * $i );
-<<<<<<< HEAD
 //@debug calc(($lg-unit + $gutter) * $i);
             }
         }
     } 
-=======
-//                @debug calc(($lg-unit + $gutter) * $i);
-            }
-        }
-
-    } 
-
->>>>>>> e53e902649acf70ca5dbc54c36162b09c7393600
 }//.container
 
