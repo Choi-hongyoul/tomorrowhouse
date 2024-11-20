@@ -1,10 +1,14 @@
-
 //변수선언은 왠만하면 최상단으로 올려줌
+
 @import './constants/colors';
 @import './constants/typograhy';
+@import './constants/breakpoint';
+
 @import './base/fonts';
 @import './base/normalize';
 @import './base/reset';
-@import './mixins/text-style';
-@import './layouts/grids';
 
+@import './mixins/text-style';
+@import './mixins/responsive';
+
+@import './layouts/grids';

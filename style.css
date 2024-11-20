@@ -429,13 +429,17 @@ a, button {
   cursor: pointer;
 }
 
-p {
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.001em;
-  color: #191A20;
-}
+/*
+.section {
+    @include responsive(T){
+        color: red;     // @content 를 믹스인에 넣어야함
+    }
 
+    @include responsive(D){
+        color: blue;   // @content 를 믹스인에 넣어야함
+    }
+}
+    */
 /*  
     * MOBILE : < 768px ---------------------------------------------
     *  fixture : sm

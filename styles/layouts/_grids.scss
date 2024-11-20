@@ -1,4 +1,4 @@
-@use 'sass:math';  // math 모듈을 가져옵니다.
+
 
 //                                                          Responsive Grid System
 
@@ -39,13 +39,11 @@ $gutter: 20px;   ///20px 공통
 $sm-columns :4;
 $sm-gmargin : 5px;
 
-$md-breakpoint : 768px;
 $md-columns :12;
 $md-gmargin : 30px;
 $md-max-container :  calc(960px + ($md-gmargin * 2) );
  //960을 맞추기 위해 container로 빠지는 마진값을 더 해줌
 
-$lg-breakpoint: 1200px;
 $lg-columns: 12;
 $lg-unit: 75px; // unit값이75px로 고정이므로 맥스컨테이너와 마진값은 필요없음
 $lg-max-container : ($lg-unit + $gutter) * $lg-columns; //1140px; 
@@ -53,6 +51,7 @@ $lg-max-container : ($lg-unit + $gutter) * $lg-columns; //1140px;
 // @debug ($lg-unit + $gutter) * $lg-columns;
 
 .container {
+
     width: 100%;
     padding: 0 $sm-gmargin;
     margin: 0 auto; //정중앙
@@ -79,11 +78,13 @@ $lg-max-container : ($lg-unit + $gutter) * $lg-columns; //1140px;
 
 
  //TABLET--------------------------------------------------------------------
-    @media screen and (min-width: $md-breakpoint){
+    // @media screen and (min-width: $md-breakpoint) -responsive 설정후에 아래처럼
+    @include responsive(T){
         max-width:  $md-max-container;
         padding: 0 $md-gmargin;
 
         @for $i from 1 through $md-columns {
+
             .col-md-#{$i} {
                 //width: percentage($i / $md-columns);
                 width :calc(($i / $md-columns) * 100%);
@@ -92,7 +93,8 @@ $lg-max-container : ($lg-unit + $gutter) * $lg-columns; //1140px;
     }
 
 //DESKTOP--------------------------------------------------------------------
-    @media screen and (min-width: $lg-breakpoint){
+    //@media screen and (min-width: $lg-breakpoint)-responsive 설정후에 아래처럼
+    @include responsive(D)  {
         max-width: $lg-max-container;
         padding: 0;
 
@@ -103,4 +105,5 @@ $lg-max-container : ($lg-unit + $gutter) * $lg-columns; //1140px;
             }
         }
     } 
+
 }//.container
