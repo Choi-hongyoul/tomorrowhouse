@@ -410,16 +410,6 @@ ol, ul {
   padding-left: 0;
 }
 
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -440,11 +430,61 @@ a, button {
     }
 }
     */
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/*
+
+
+//***********ex) 입력된 scss
+
+1.
+p {
+    @include flexbox(center, around )
+}
+
+2.
+.list{
+    @include flexbox(start,center);
+}
+
+//***********  ex) 변경된 css
+p {
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+}
+
+.list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+*/
+.tag-gray, .tag-green, .tag-red {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.005em;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.tag-red {
+  color: #FFFFFF;
+  background-color: #F86D7D;
+}
+
+.tag-green {
+  color: #FFFFFF;
+  background-color: #22C58B;
+}
+
+.tag-gray {
+  color: #8C8D96;
+  background-color: #E0E2E7;
 }
 
 /*  

@@ -1,0 +1,96 @@
+// ex>
+// @function _get-flex-value() {
+//     @return 200;
+// }
+
+// // ex>
+// p {
+//     font-weight: _get-flex-value();
+// }
+
+
+//아래처럼 @if 문 길게 쓰지않으려면 scss에서 제공하는 map 사용
+$flex-map: (
+    start: flex-start,
+    end: flex-end, 
+    between: space-between,
+    around: space-around,
+    stratch: stretch,
+    center: center
+);
+
+@function _get-flex-value($key) {
+    @return map-get($flex-map, $key);
+/*
+    //flex-start → start
+    //flex-end → end
+    //space-between → between
+    //space-around → around
+    //stretch → stretch
+    //center → center
+
+    // @if ($key == start){
+    //     @return flex-start;
+    // }
+    // @if ($key == end){
+    //     @return flex-end;
+    // }
+    // @if ($key == between){
+    //     @return space-between;
+    // }
+    // @if ($key == around){
+    //     @return space-around;
+    // }
+    // @if ($key == stretch){
+    //     @return stretch;
+    // }
+    // @if ($key == center){
+    //     @return center;
+    // }
+*/
+}
+
+
+@mixin flexbox($jc: center, $ai: center) {
+    display: flex;
+    justify-content :_get-flex-value($jc);
+    align-items:_get-flex-value($ai);
+}
+
+@mixin inline-flexbox($jc: center, $ai: center) {
+    display: inline-flex;
+    justify-content :_get-flex-value($jc);
+    align-items:_get-flex-value($ai);
+}
+
+
+
+/*
+
+
+//***********ex) 입력된 scss
+
+1.
+p {
+    @include flexbox(center, around )
+}
+
+2.
+.list{
+    @include flexbox(start,center);
+}
+
+//***********  ex) 변경된 css
+p {
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+}
+
+.list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+*/

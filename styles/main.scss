@@ -11,5 +11,8 @@
 @import './mixins/text-style';
 @import './mixins/responsive';
 @import './mixins/position';
+@import './mixins/flexbox';
+
+@import './modules/tag';
 
 @import './layouts/grids';

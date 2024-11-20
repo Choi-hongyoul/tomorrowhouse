@@ -6,7 +6,6 @@
     }
 }
 
-
 @mixin pos-center-y($type :absolute) {
     @if ($type == absolute or $type == fixed){
         position: $type;
@@ -15,21 +14,26 @@
     }
 }
 
-
 @mixin pos-center($type: absolute) {
     @if ($type == absolute or $type == fixed) {
         position: $type;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
     }
-
-
 }
 
+//ex >-- o
+// .modal {
+//     @include pos-center() 
+// }
 
+//ex >-- o
+// .modal {
+//     @include pos-center(fixed)
+// }
 
-.modal {
-    @include pos-center()
-}
+// ex >-- o
+// .modal {
+//     @include pos-center(absolute)
+// }

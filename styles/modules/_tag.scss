@@ -1,0 +1,31 @@
+//%%%%%%%%%%%%%%%%%%%%%%%%%place holder !!!! 사용해보기 %%%%%%%%%%%%%%%%%%%%%%%
+//scss 기능 placeholder % - 인자를 쓸수없어 () 필요없다. 
+
+%tag-base {
+    //공용 스타일
+    @include inline-flexbox;
+    @include text-style(12);
+    height: 20px;
+    padding:0 6px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.tag-red {
+    @extend %tag-base;
+    color:$white;
+    background-color: $red;
+}
+
+.tag-green {
+    @extend %tag-base;
+    color:$white;
+    background-color: $green;
+}
+
+.tag-gray {
+    @extend %tag-base;
+    color:$secondary;
+    background-color: $border;
+
+}
