@@ -440,6 +440,13 @@ a, button {
     }
 }
     */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /*  
     * MOBILE : < 768px ---------------------------------------------
     *  fixture : sm
