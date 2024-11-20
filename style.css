@@ -488,6 +488,13 @@ p {
   background-color: #E0E2E7;
 }
 
+/*
+    <div>
+        <stong class="tag-red">특가</stong>
+        <stong class="tag-gray">무료배송</stong>
+        <stong class="tag-green">첫 리뷰 두배 적립</stong>
+    </div>
+*/
 .avatar-32, .avatar-24 {
   display: block;
   overflow: hidden;
@@ -510,6 +517,16 @@ p {
   height: 32px;
 }
 
+/*
+    <div>
+        <div class="avatar-32">
+            <img src="./assets/images/img-user-01.jpg" alt="4dollor">
+        </div>
+        <div class="avatar-24">
+            <img src="./assets/images/img-user-01.jpg" alt="4dollor">
+        </div>
+    </div>
+*/
 .star-rating-20, .star-rating-16, .star-rating-13 {
   display: flex;
   justify-content: flex-start;
@@ -535,6 +552,21 @@ p {
 }
 
 /*
+    <div>
+        <div class="star-rating-20">
+            <i class="ic-star is-active"></i>
+            <i class="ic-star"></i>
+            <i class="ic-star"></i>
+            <i class="ic-star"></i>
+            <i class="ic-star"></i>
+        </div>
+        <div class="star-rating-20">
+            <i class="ic-star is-active"></i>
+            <i class="ic-star is-active"></i>
+            <i class="ic-star"></i>
+            <i class="ic-star"></i>
+            <i class="ic-star"></i>
+        </div>
         <div class="star-rating-20">
             <i class="ic-star is-active"></i>
             <i class="ic-star is-active"></i>
@@ -542,9 +574,125 @@ p {
             <i class="ic-star"></i>
             <i class="ic-star"></i>
         </div>
+        <div class="star-rating-20">
+            <i class="ic-star is-active"></i>
+            <i class="ic-star is-active"></i>
+            <i class="ic-star is-active"></i>
+            <i class="ic-star is-active"></i>
+            <i class="ic-star"></i>
+        </div>
+        <div class="star-rating-20">
+            <i class="ic-star is-active"></i>
+            <i class="ic-star is-active"></i>
+            <i class="ic-star is-active"></i>
+            <i class="ic-star is-active"></i>
+            <i class="ic-star is-active"></i>
+        </div>
     </div>
 
     */
+.price-off, .price-16,
+.price-20,
+.price-32 {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.price-off .amount, .price-16 .amount,
+.price-20 .amount,
+.price-32 .amount {
+  font-family: "Tahoma", sans-serif;
+  line-height: 1;
+}
+.price-off .currency, .price-16 .currency,
+.price-20 .currency,
+.price-32 .currency {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.price-16,
+.price-20,
+.price-32 {
+  color: #191A20;
+}
+.price-16 .amount,
+.price-20 .amount,
+.price-32 .amount {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.price-16 .currency,
+.price-20 .currency,
+.price-32 .currency {
+  font-weight: 700;
+}
+
+.price-16 .amount {
+  font-size: 16px;
+}
+.price-16 .currency {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.001em;
+  color: false;
+}
+
+.price-20 .amount {
+  font-size: 20px;
+}
+.price-20 .currency {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.001em;
+  color: false;
+}
+
+.price-32 .amount {
+  font-size: 32px;
+}
+.price-32 .currency {
+  line-height: 28px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+}
+
+.price-off {
+  color: #8C8D96;
+}
+.price-off .amount {
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.price-off .currency {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.001em;
+  color: false;
+  font-weight: 400;
+}
+
+/*
+    <div>
+        <div class="price-16">
+            <strong class="amount">40,000</strong>
+            <span class="currency">원</span>
+        </div>
+        <div class="price-20">
+            <strong class="amount">40,000</strong>
+            <span class="currency">원</span>
+        </div>
+        <div class="price-32">
+            <strong class="amount">40,000</strong>
+            <span class="currency">원</span>
+        </div>
+        <div class="price-off">
+            <strong class="amount">40,000</strong>
+            <span class="currency">원</span>
+        </div>
+*/
 /*  
     * MOBILE : < 768px ---------------------------------------------
     *  fixture : sm
