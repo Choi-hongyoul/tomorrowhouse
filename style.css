@@ -417,6 +417,10 @@ table {
 
 a, button {
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  border: none;
 }
 
 /*
@@ -794,7 +798,8 @@ p {
 </div>
 
 */
-.input-group, .form-select {
+.form-select,
+.form-input {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.001em;
@@ -809,17 +814,21 @@ p {
   transition: background-color 200ms ease-in-out;
   appearance: none;
 }
-.input-group::placeholder, .form-select::placeholder {
+.form-select::placeholder,
+.form-input::placeholder {
   color: #B2B3B9;
 }
-.input-group:hover, .form-select:hover {
+.form-select:hover,
+.form-input:hover {
   background-color: #F7F8FA;
 }
-.input-group:disabled, .form-select:disabled {
+.form-select:disabled,
+.form-input:disabled {
   opacity: 0.4;
   cursor: not-allowed;
 }
-.input-group:disabled:hover, .form-select:disabled:hover {
+.form-select:disabled:hover,
+.form-input:disabled:hover {
   background-color: #FFFFFF;
 }
 
@@ -846,18 +855,19 @@ p {
   pointer-events: none;
 }
 
-.input-group .form-input {
+.input-group {
   position: relative;
-  padding-right: 40px;
-  text-overflow: ellipsis;
+}
+.input-group .form-input {
+  padding-left: 40px;
 }
 .input-group .ic-search {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 8px;
-  font-size: 24px;
-  color: #B2B3B9;
+  left: 10px;
+  font-size: 20px;
+  color: #8C8D96;
 }
 
 /*
@@ -874,6 +884,70 @@ p {
         <input type="text" placeholder="스토어 검색"/>
     </div>
 */
+.pagenation .page-control, .pagenation .page-list a, .pagenation .page-list button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.001em;
+  color: #3F4150;
+  height: 26px;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+}
+
+.pagenation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagenation .page-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagenation .page-list .page-item {
+  margin-right: 4px;
+}
+.pagenation .page-list .page-item.is-active a, .pagenation .page-list .page-item.is-active button {
+  color: #FFFFFF !important;
+  background-color: #3DA5F5;
+}
+.pagenation .page-list .page-item:last-child {
+  margin-right: 0;
+}
+.pagenation .page-list a, .pagenation .page-list button {
+  min-width: 26px;
+  padding: 0 4px;
+}
+.pagenation .page-list a:hover, .pagenation .page-list button:hover {
+  color: #3DA5F5;
+}
+.pagenation .page-control {
+  width: 26px;
+  border: 1px solid #E0E2E7;
+}
+.pagenation .page-control.page-prev {
+  margin-right: 24px;
+}
+.pagenation .page-control.page-prev .ic-chevron {
+  transform: rotate(90deg);
+}
+.pagenation .page-control.page-next {
+  margin-left: 24px;
+}
+.pagenation .page-control.page-next .ic-chevron {
+  transform: rotate(-90deg);
+}
+.pagenation .page-control:hover {
+  opacity: 0.4;
+}
+.pagenation .page-control .ic-caret {
+  font-size: 20px;
+}
+
 /*  
     * MOBILE : < 768px ---------------------------------------------
     *  fixture : sm
