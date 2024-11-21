@@ -10,18 +10,16 @@
 
 .pagenation {
     @include flexbox;
-
     .page-list {
         @include flexbox;
-
         .page-item {
             margin-right: 4px;
 
-            &.is-active{
-                a,button {
+            &.is-active {
+                a,
+                button {
                     color: $white !important; //1) 대신 
                     background-color: $blue;
-
                     //1)  &:hover {
                     //     color: $white;
                     // }
@@ -33,7 +31,8 @@
             }
         }
 
-        a,button {
+        a,
+        button {
             @extend %page-item-base;
             min-width: 26px;
             padding: 0 4px;
@@ -52,7 +51,6 @@
 
         &.page-prev {
             margin-right:24px;
-
             .ic-chevron {
                 transform: rotate(90deg);
             }
@@ -60,22 +58,38 @@
 
         &.page-next {
             margin-left:24px;
-
             .ic-chevron {
                 transform: rotate(-90deg);
             }
         }
-
-
         &:hover {
             opacity: 0.4;
         }
-
-        .ic-caret {
-            font-size: 20px;
-        
+            .ic-caret {
+                font-size: 20px;
+            }
         }
-
-
-    }
 }
+
+
+
+/*
+<div class="pagenation">
+    <button type="button" class="page-control page-prev">
+        <i class="ic-chevron"></i>
+    </button>
+
+    <ol class="page-list">
+        <li class="page-item"><a href="/">1</a></li>
+        <li class="page-item is-active"><a href="/">2</a></li>
+        <li class="page-item"><a href="/">3</a></li>
+        <li class="page-item"><a href="/">4</a></li>
+        <li class="page-item"><a href="/">5</a></li>
+    </ol>
+
+    <button type="button" class="page-control page-next">
+        <i class="ic-chevron"></i>
+    </button>
+</div>
+
+*/
