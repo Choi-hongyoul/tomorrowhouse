@@ -693,6 +693,193 @@ p {
             <span class="currency">원</span>
         </div>
 */
+.btn-ghost, .btn-outlined, .btn-secondary, .btn-primary {
+  padding: 0 8px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+.btn-ghost:disabled, .btn-outlined:disabled, .btn-secondary:disabled, .btn-primary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  color: #FFFFFF;
+  background-color: #3DA5F5;
+  transition: background-color 200ms ease-in-out;
+}
+.btn-primary:hover {
+  background-color: #3186C4;
+}
+.btn-primary:disabled:hover {
+  background-color: #3DA5F5;
+}
+
+.btn-secondary {
+  color: #3F4150;
+  background-color: #E0E2E7;
+  transition: background-color 200ms ease-in-out;
+}
+.btn-secondary:hover {
+  background-color: #B2B3B9;
+}
+.btn-secondary:disabled:hover {
+  background-color: #E0E2E7;
+}
+
+.btn-outlined {
+  color: #3DA5F5;
+  background-color: #FFFFFF;
+  border: 1px solid #3DA5F5;
+  transition: background-color 200ms ease-in-out;
+}
+.btn-outlined:hover {
+  background-color: #ECF6FE;
+}
+.btn-outlined:hover:disabled:hover {
+  background-color: #FFFFFF;
+}
+
+.btn-ghost {
+  color: #3F4150;
+  background-color: transparent;
+  transition: color 200ms ease-in-out;
+}
+.btn-ghost:hover {
+  color: #8C8D96;
+}
+.btn-ghost:disabled:hover {
+  color: #3F4150;
+}
+
+.btn-32 {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.001em;
+  color: false;
+  height: 32px;
+}
+
+.btn-40 {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.001em;
+  color: false;
+  height: 40px;
+}
+
+.btn-48 {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.001em;
+  color: false;
+  height: 48px;
+}
+
+.btn-55 {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.002em;
+  color: false;
+  height: 55px;
+}
+
+/*
+
+<div>
+    <button type="button" class="btn-primary btn-55" disabled>버튼입니다</button>
+    <button type="button" class="btn-secondary btn-55" disabled>버튼입니다</button>
+    <button type="button" class="btn-outlined btn-55" disabled>버튼입니다</button>
+    <button type="button" class="btn-ghost btn-55" disabled>버튼입니다</button>
+</div>
+
+*/
+.form-select,
+.form-input {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.001em;
+  color: #3F4150;
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 16px;
+  background-color: #FFFFFF;
+  border: 1px solid #E0E2E7;
+  border-radius: 4px;
+  transition: background-color 200ms ease-in-out;
+  appearance: none;
+}
+.form-select::placeholder,
+.form-input::placeholder {
+  color: #B2B3B9;
+}
+.form-select:hover,
+.form-input:hover {
+  background-color: #F7F8FA;
+}
+.form-select:disabled,
+.form-input:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.form-select:disabled:hover,
+.form-input:disabled:hover {
+  background-color: #FFFFFF;
+}
+
+.select-group {
+  position: relative;
+}
+.select-group.is-active .form-select {
+  border-color: #3DA5F5;
+}
+.select-group.is-active .ic-caret {
+  color: #3DA5F5;
+}
+.select-group .form-select {
+  padding-right: 40px;
+  text-overflow: ellipsis;
+}
+.select-group .ic-caret {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8px;
+  font-size: 24px;
+  color: #B2B3B9;
+  pointer-events: none;
+}
+
+.input-group {
+  position: relative;
+}
+.input-group .form-input {
+  padding-left: 40px;
+}
+.input-group .ic-search {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  font-size: 20px;
+  color: #8C8D96;
+}
+
+/*
+
+
+    <div>
+        <select disabled>
+            <option value="1">선택 사항 1</option>
+            <option value="2">선택 사항 2</option>
+            <option value="3">선택 사항 3</option>
+            <option value="4">선택 사항 4</option>
+            <option value="5">선택 사항 5</option>
+        </select>
+        <input type="text" placeholder="스토어 검색"/>
+    </div>
+*/
 /*  
     * MOBILE : < 768px ---------------------------------------------
     *  fixture : sm
