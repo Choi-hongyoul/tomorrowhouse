@@ -13,9 +13,8 @@
 
 
 
-//responsible
+//responsible  READ ME.md 참고하셈.
 
-//
 .sm-only {
     @media screen and (min-width: $md-breakpoint) {
         display:none !important;
@@ -23,7 +22,7 @@
 }
 
 .md-only {
-    @media screen and (max-width: ($md-breakpoint - 1px)) {
+    @media screen and (max-width: ($md-breakpoint - 1)) {
         display: none !important;
     }
     @media screen and (min-width: $lg-breakpoint) {
@@ -56,3 +55,4 @@
         display: none !important;
     }
 }
+
