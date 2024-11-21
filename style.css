@@ -794,8 +794,7 @@ p {
 </div>
 
 */
-.form-select,
-.form-input {
+.input-group, .form-select {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.001em;
@@ -810,21 +809,17 @@ p {
   transition: background-color 200ms ease-in-out;
   appearance: none;
 }
-.form-select::placeholder,
-.form-input::placeholder {
+.input-group::placeholder, .form-select::placeholder {
   color: #B2B3B9;
 }
-.form-select:hover,
-.form-input:hover {
+.input-group:hover, .form-select:hover {
   background-color: #F7F8FA;
 }
-.form-select:disabled,
-.form-input:disabled {
+.input-group:disabled, .form-select:disabled {
   opacity: 0.4;
   cursor: not-allowed;
 }
-.form-select:disabled:hover,
-.form-input:disabled:hover {
+.input-group:disabled:hover, .form-select:disabled:hover {
   background-color: #FFFFFF;
 }
 
@@ -851,19 +846,18 @@ p {
   pointer-events: none;
 }
 
-.input-group {
-  position: relative;
-}
 .input-group .form-input {
-  padding-left: 40px;
+  position: relative;
+  padding-right: 40px;
+  text-overflow: ellipsis;
 }
 .input-group .ic-search {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 10px;
-  font-size: 20px;
-  color: #8C8D96;
+  right: 8px;
+  font-size: 24px;
+  color: #B2B3B9;
 }
 
 /*
